@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  position: relative; /* Required for positioning buttons */
+}
+
+.apply-button {
+  position: absolute;
+  top: 100px;
+  right: 420px;
+}
+
+.cancel-button {
+  position: absolute;
+  top: 100px;
+  left: 450px;
+}
+
+  
+  .filters {
+    text-align: justify;
+  }
+  

@@ -1,0 +1,34 @@
+import React, { useState } from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import './CalendarPage.css'; // Import CSS file for styling
+
+function CalendarPage() {
+  const [selectedDate, setSelectedDate] = useState(null);
+
+  return (
+    <div className="center" style={{ backgroundColor: '#C7F3B2' }}>
+      <h1>Calendar Page</h1>
+      <div className="calendar-container">
+        <DatePicker
+          selected={selectedDate}
+          onChange={(date) => setSelectedDate(date)}
+          dateFormat="dd/MM/yyyy"
+          showMonthDropdown
+          showYearDropdown
+          dropdownMode="select"
+          className="calendar"
+          placeholderText="Select a date"
+        />
+      </div>
+      {selectedDate && (
+        <div>
+          <h2>Selected Date:</h2>
+          <p>{selectedDate.toLocaleDateString()}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default CalendarPage;
